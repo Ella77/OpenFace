@@ -79,6 +79,17 @@ Tadas Baltrušaitis, Marwa Mahmoud, and Peter Robinson
 in _Facial Expression Recognition and Analysis Challenge_,
 _IEEE International Conference on Automatic Face and Gesture Recognition_, 2015
 
+sudo docker run -it --rm --name openface algebr/openface:latest
+
+sudo docker cp data openface:/home/openface-build/tmp
+
+build/bin/FaceLandmarkImg -fdir input_folder -out_dir output_folder -aus
+
+
+ sudo docker cp openface:/home/openface-build/processed/*.csv data
+
+
+
 # Commercial license
 
 For inquiries about the commercial licensing of the OpenFace toolkit please visit https://www.flintbox.com/public/project/50632/
